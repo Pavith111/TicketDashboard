@@ -47,7 +47,7 @@ export async function signIn(input: unknown, next?: string): Promise<ActionResul
 
   if (!profile?.is_active) {
     await supabase.auth.signOut();
-    return fail("This account does not have access to the IT Helpdesk admin portal.");
+    return fail("This account does not have access to the IT Support admin portal.");
   }
 
   const target = next && next.startsWith("/admin") && !next.startsWith("//") ? next : "/admin";

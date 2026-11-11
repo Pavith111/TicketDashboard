@@ -58,7 +58,7 @@ export async function submitTicket(input: unknown, files: unknown): Promise<Subm
   } catch {
     return {
       ok: false,
-      error: "The helpdesk is not connected yet. Please contact the IT office directly.",
+      error: "IT Support is not connected yet. Please contact the IT office directly.",
     };
   }
 

@@ -155,7 +155,7 @@ export function MobileNav({ role, counts }: { role: StaffRole; counts: Counts })
       <SheetContent side="left" className="w-72 bg-sidebar p-0">
         <SheetTitle className="sr-only">Navigation</SheetTitle>
         <div className="flex h-16 items-center px-5">
-          <Logo label="IT Helpdesk · Admin" />
+          <Logo label="IT Support · Admin" />
         </div>
         <div className="px-3 py-4">
           <NavContent role={role} counts={counts} onNavigate={() => setOpen(false)} layoutId="mobile-active" />

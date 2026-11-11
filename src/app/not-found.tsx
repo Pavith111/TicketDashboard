@@ -14,7 +14,7 @@ export default function NotFound() {
       </div>
       <Link href="/" className={buttonVariants({ variant: "outline", size: "lg" })}>
         <ArrowLeft className="size-4" />
-        Back to IT Helpdesk
+        Back to IT Support
       </Link>
     </div>
   );

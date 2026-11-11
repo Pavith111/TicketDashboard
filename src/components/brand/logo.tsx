@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-/** Monochrome Zuse Technologies wordmark. */
+/** Monochrome Zuse IT Support wordmark. */
 export function LogoMark({ className }: { className?: string }) {
   return (
     <span
@@ -29,7 +29,7 @@ export function Logo({ className, label }: { className?: string; label?: string 
       <LogoMark />
       <span className="flex flex-col leading-none">
         <span className="font-heading text-[13px] font-extrabold tracking-[0.14em]">
-          ZUSE TECHNOLOGIES
+          ZUSE
         </span>
         {label && (
           <span className="mt-1 text-[11px] font-medium tracking-wide text-muted-foreground">

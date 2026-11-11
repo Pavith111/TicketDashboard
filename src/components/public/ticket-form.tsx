@@ -299,7 +299,7 @@ export function TicketForm({ lookups }: { lookups: PublicLookups }) {
 
             <div className="flex flex-col-reverse items-stretch gap-4 border-t border-border bg-subtle px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
               <p className="text-xs text-muted-foreground">
-                Your request goes straight to the Zuse Technologies IT team.
+                Your request goes straight to the Zuse IT Support team.
               </p>
               <Button type="submit" size="lg" disabled={isPending} className="min-w-48">
                 {isPending ? (

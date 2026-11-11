@@ -88,7 +88,7 @@ export function LoginForm({ next }: { next?: string }) {
       </Button>
 
       <p className="text-center text-xs text-muted-foreground">
-        Forgot your password? Ask a helpdesk administrator to reset it.
+        Forgot your password? Ask an IT Support administrator to reset it.
       </p>
     </form>
   );

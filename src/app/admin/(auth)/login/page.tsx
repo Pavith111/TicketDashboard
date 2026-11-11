@@ -21,7 +21,7 @@ export default function AdminLoginPage({ searchParams }: PageProps<"/admin/login
           className="pointer-events-none absolute inset-0 opacity-[0.5] [background-image:linear-gradient(to_right,rgb(255_255_255/0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.06)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_at_bottom_left,black_20%,transparent_70%)]"
         />
         <div className="relative [&_.bg-foreground]:bg-white [&_.text-background]:text-black [&_.text-muted-foreground]:text-zinc-400">
-          <Logo label="IT Helpdesk · Admin" />
+          <Logo label="IT Support · Admin" />
         </div>
         <div className="relative max-w-md">
           <p className="font-mono text-xs tracking-wider text-zinc-500">ZT-OPS / CONSOLE</p>
@@ -29,7 +29,7 @@ export default function AdminLoginPage({ searchParams }: PageProps<"/admin/login
             Every request, triaged and tracked in one place.
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-zinc-400">
-            The operations console for the Zuse Technologies IT team supporting Lyceum International
+            The operations console for the Zuse IT Support team at Lyceum International
             School, Panadura.
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function AdminLoginPage({ searchParams }: PageProps<"/admin/login
       <main className="flex flex-col">
         <div className="flex h-16 items-center justify-between px-6 lg:justify-end">
           <span className="lg:hidden">
-            <Logo label="IT Helpdesk · Admin" />
+            <Logo label="IT Support · Admin" />
           </span>
           <ThemeToggle />
         </div>
@@ -72,7 +72,7 @@ async function LoginGate({ searchParams }: { searchParams: PageProps<"/admin/log
     return (
       <div className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-5">
         <p className="text-sm">
-          You&apos;re signed in, but this account doesn&apos;t have access to the helpdesk admin portal.
+          You&apos;re signed in, but this account doesn&apos;t have access to the IT Support admin portal.
           Ask an administrator to add you to the IT team.
         </p>
         <SignOutButton variant="outline" />

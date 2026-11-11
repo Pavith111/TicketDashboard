@@ -1,6 +1,6 @@
-# Zuse IT Helpdesk
+# Zuse IT Support
 
-IT helpdesk and ticket management for **Zuse Technologies (Pvt) Ltd**, supporting IT operations at
+IT Support ticket management for **Zuse IT Support**, serving
 Lyceum International School, Panadura.
 
 | Portal | Route | Who | Auth |

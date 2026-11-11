@@ -18,7 +18,7 @@ export default async function SupportPortalPage() {
 
       <header className="sticky top-0 z-30 border-b border-border/70 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-          <Logo label="IT Helpdesk" />
+          <Logo label="IT Support" />
           <ThemeToggle />
         </div>
       </header>
@@ -93,7 +93,7 @@ export default async function SupportPortalPage() {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <span>© Zuse Technologies (Pvt) Ltd. All rights reserved.</span>
+          <span>© Zuse IT Support. All rights reserved.</span>
           <span>IT operations for Lyceum International School, Panadura</span>
         </div>
       </footer>

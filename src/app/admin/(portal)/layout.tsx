@@ -8,14 +8,14 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { requireStaff } from "@/lib/auth";
 import { getTicketCounts } from "@/lib/data/tickets";
 
-export const metadata: Metadata = { title: { default: "Admin", template: "%s · Zuse IT Admin" } };
+export const metadata: Metadata = { title: { default: "Admin", template: "%s · Zuse IT Support Admin" } };
 
 export default function PortalLayout({ children }: LayoutProps<"/admin">) {
   return (
     <div className="min-h-dvh lg:grid lg:grid-cols-[260px_1fr]">
       <aside className="hidden border-r border-sidebar-border bg-sidebar lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col">
         <div className="flex h-16 items-center px-5">
-          <Logo label="IT Helpdesk · Admin" />
+          <Logo label="IT Support · Admin" />
         </div>
         <div className="flex-1 overflow-y-auto px-3 py-4">
           <Suspense fallback={<SidebarNavSkeleton />}>

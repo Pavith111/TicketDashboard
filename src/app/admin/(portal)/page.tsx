@@ -50,7 +50,7 @@ async function Dashboard() {
       <PageHeader
         eyebrow="Overview"
         title={`Hello, ${firstName}`}
-        description="Here's what's happening across the helpdesk."
+        description="Here's what's happening across IT Support."
         actions={
           <Link href="/admin/tickets" className={buttonVariants()}>
             Open ticket queue

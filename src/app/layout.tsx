@@ -16,12 +16,12 @@ const jetbrains = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["lati
 
 export const metadata: Metadata = {
   title: {
-    default: "IT Helpdesk · Zuse Technologies",
-    template: "%s · Zuse IT Helpdesk",
+    default: "Zuse IT Support",
+    template: "%s · Zuse IT Support",
   },
   description:
-    "Report a technical issue to the IT support team at Lyceum International School Panadura, operated by Zuse Technologies.",
-  applicationName: "Zuse IT Helpdesk",
+    "Report a technical issue to the IT support team at Lyceum International School Panadura, operated by Zuse IT Support.",
+  applicationName: "Zuse IT Support",
   robots: { index: false, follow: false },
 };
 

@@ -1,11 +1,46 @@
-import { format, formatDistanceToNowStrict } from "date-fns";
+import { formatDistanceToNowStrict } from "date-fns";
 
+/**
+ * All dates are shown in Sri Lanka time, regardless of where the code runs
+ * (Vercel servers use UTC; a visitor's browser may be anywhere).
+ */
+export const TIME_ZONE = "Asia/Colombo";
+/** Asia/Colombo is a fixed UTC+05:30 with no daylight saving. */
+const TZ_OFFSET_MS = 5.5 * 60 * 60 * 1000;
+
+const partsFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: TIME_ZONE,
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+  hour: "numeric",
+  minute: "2-digit",
+  hour12: true,
+});
+
+function zonedParts(value: string | Date) {
+  const map: Record<string, string> = {};
+  for (const part of partsFormatter.formatToParts(new Date(value))) map[part.type] = part.value;
+  return map;
+}
+
+/** Supports the tokens `d`, `MMM` and `yyyy`, e.g. "d MMM yyyy", "d MMM", "MMM yyyy". */
 export function formatDate(value: string | Date, pattern = "d MMM yyyy") {
-  return format(new Date(value), pattern);
+  const p = zonedParts(value);
+  return pattern.replace(/yyyy|MMM|d/g, (token) =>
+    token === "yyyy" ? p.year : token === "MMM" ? p.month : p.day,
+  );
 }
 
 export function formatDateTime(value: string | Date) {
-  return format(new Date(value), "d MMM yyyy, h:mm a");
+  const p = zonedParts(value);
+  return `${p.day} ${p.month} ${p.year}, ${p.hour}:${p.minute} ${p.dayPeriod.toUpperCase()}`;
+}
+
+/** Midnight (start of the current day) in Sri Lanka, as a real instant. */
+export function startOfTodayInTimeZone(now = new Date()) {
+  const day = 24 * 60 * 60 * 1000;
+  return new Date(Math.floor((now.getTime() + TZ_OFFSET_MS) / day) * day - TZ_OFFSET_MS);
 }
 
 export function timeAgo(value: string | Date) {

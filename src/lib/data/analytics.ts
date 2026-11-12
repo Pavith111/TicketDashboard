@@ -1,6 +1,7 @@
 import "server-only";
 import { subDays } from "date-fns";
 import { TICKET_STATUSES, type TicketPriority, type TicketStatus } from "@/lib/constants";
+import { startOfTodayInTimeZone } from "@/lib/format";
 import { createClient } from "@/lib/supabase/server";
 import type { TicketListItem } from "@/lib/types";
 
@@ -88,8 +89,8 @@ export async function getDashboardData(): Promise<DashboardData> {
   if (windowRows.error) throw new Error(windowRows.error.message);
   const rows = windowRows.data ?? [];
 
-  const startOfToday = new Date();
-  startOfToday.setHours(0, 0, 0, 0);
+  // "Today" means today in Sri Lanka, not on the (UTC) server.
+  const startOfToday = startOfTodayInTimeZone();
 
   const resolvedDurations = rows
     .filter((r) => r.resolved_at)
